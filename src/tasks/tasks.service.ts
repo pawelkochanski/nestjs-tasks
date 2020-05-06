@@ -6,7 +6,6 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Task } from './task.entity';
 import { TaskStatus } from './task-status.enum';
 import { User } from '../auth/user.entity';
-import { GetUser } from '../auth/get-user.decorator';
 
 @Injectable()
 export class TasksService {
@@ -20,7 +19,6 @@ export class TasksService {
   }
 
   async getTaskById(id: number, user: User): Promise<Task> {
-    console.log(user.id);
     const found = await this.taskRepository.findOne({
       where: { id, userId: user.id },
     });
