@@ -2,8 +2,6 @@ version: '3.7'
 
 services:
   main:
-    environment:
-      - PORT=${PORT}
     container_name: main
     build:
       context: .

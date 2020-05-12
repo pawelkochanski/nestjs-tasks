@@ -118,6 +118,7 @@ describe('TasksService', () => {
       const spy = jest
         .spyOn(tasksService, 'getTaskById')
         .mockResolvedValue(mockTask);
+
       await tasksService.updateTaskStatus(11, TaskStatus.OPEN, mockUser);
       expect(spy).toHaveBeenCalledWith(11, mockUser);
       expect(mockTask.save).toHaveBeenCalled();
