@@ -30,7 +30,7 @@
     "@types/dotenv-safe": "^8.1.0",
     "bcryptjs": "^2.4.3",
     "class-transformer": "^0.2.3",
-    "class-validator": "^0.12.2",
+    "class-validator": "^0.14.0",
     "dotenv-safe": "^8.2.0",
     "fs": "0.0.1-security",
     "passport": "^0.4.1",
